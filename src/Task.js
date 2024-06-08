@@ -13,6 +13,7 @@ function Task(props) {
                 <StatusBox />
                 <button className="deleteButton" onClick={props.onTaskDelete}>X</button>
                 <p className="date">Created On: {props.taskPostDate}</p>
+                <p className="dueDate">Due Date: {props.taskDueDate.toDateString()}</p>
             </div>
 
         </li>

@@ -16,8 +16,8 @@ const StatusBox = () => {
       cursor: 'pointer',
       display: 'inline-block',
       position: 'relative',
-      left: '43%',
-      bottom: '-57px',
+      left: '75%',
+      bottom: '0%',
       zIndex: '1',
     };
   

@@ -12,6 +12,7 @@ import newLogo from './newLogo.png';
 // }
 
 function TaskManager() {
+    const [taskDueDate, setTaskDueDate] = useState(null);
     const [tasks, setTasks] = useState([]);
     const [taskName, setTaskName] = useState("");
 
@@ -37,9 +38,15 @@ function TaskManager() {
             return;
         }
 
-        const newTask = {taskName: taskName, taskPostDate: new Date().toLocaleDateString()};
+        if (taskDueDate === null) {
+            alert("Please select a due date for the task.");
+            return;
+        }
+
+        const newTask = {taskName: taskName, taskPostDate: new Date().toLocaleDateString(), taskDueDate: taskDueDate};
         setTasks((prev) => [newTask, ...prev]);
         setTaskName("");
+        setTaskDueDate(null);
     }
 
     const existingStyle = {
@@ -60,7 +67,7 @@ function TaskManager() {
                 <div className="mainContainer">
                     <div className="addTask">
                         <h2 id="addtask">Add New Task</h2>
-                        <CreateTask onSubmit={handleTaskSubmit} titletext={taskName} onNameChange={handleTaskNameChange} />  
+                        <CreateTask onSubmit={handleTaskSubmit} titletext={taskName} onNameChange={handleTaskNameChange} dueDate={taskDueDate} updateDueDate={setTaskDueDate}/>  
                     </div>
 
                     <h2 style={existingStyle} className="Existing">Existing Tasks</h2>

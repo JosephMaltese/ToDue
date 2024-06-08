@@ -23,6 +23,7 @@ function Tasks(props) {
                     key={index}
                     taskName={task.taskName}
                     taskPostDate={task.taskPostDate}
+                    taskDueDate={task.taskDueDate}
                     onTaskDelete={() => props.onTaskDelete(index)}
                     />
                 

@@ -42,7 +42,7 @@
     margin-bottom: 10%;
     width: 100%;
     height: 120px;
-    overflow: hidden;
+    overflow: visible;
 
 }
 
@@ -55,13 +55,17 @@
 
 }
 
+.react-datepicker__input-container {
+    background-color: #393e46;
+}
+
 input {
     background-color: whitesmoke;
     color: black;
     padding: 2%;
     width: 95%;
     font-size: medium;
-    border-radius: 5%;
+    border-radius: 25px;
 }
 
 h2, #addtask{
@@ -70,7 +74,10 @@ h2, #addtask{
 }
 
 
+
+
 form {
+   
     background-color: #393e46;
 }
 
@@ -79,7 +86,7 @@ form {
     font-size: medium;
     cursor: pointer;
     outline: 0;
-    top:9rem;
+    top:8.5rem;
     right: 30px;
     font-weight: 400;
     line-height: 1.5;
@@ -92,8 +99,10 @@ form {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     color: white;
     border-color: black;
+    width: 40px;
 
     position: absolute;
+    display: inline-block;
 
     
 
@@ -106,12 +115,14 @@ li {
 
 .taskTitle {
     background-color: rgb(169, 169, 169);
-    color: #cb3737;
-    margin-top: 0;
-    position: absolute;
-    left: 6%;
+    color: black;
+    margin-bottom: 0;
+    position: relative;
+    left: 1rem;
     font-weight: bold;
     font-size: 2rem;
+    top: 10%;
+    width: 85%;
 
 }
 
@@ -126,9 +137,10 @@ li {
     background-color: rgb(169, 169, 169);
     color: black;
     position: relative;
-    left: 2%;
+    left: -3.5rem;
     width: 98%;
     display: inline-block;
+    width:fit-content
 
 }
 
@@ -145,7 +157,7 @@ li {
     cursor: pointer;
     float: right;
     position: relative;
-    top: 2rem;
+    top: 0rem;
     right: 1rem;
 
 }
@@ -155,8 +167,8 @@ li {
     color: black;
     display: inline-block;
     position: relative;
-    left: 40%;
-    bottom: -53px;
+    left: 73%;
+    bottom: -10%;
     z-index: 1;
 }
 
@@ -180,3 +192,66 @@ h2, p, input, button {
   display: inline-block; /* Align elements side by side */
   vertical-align: middle; /* Align elements vertically */
 }
+
+
+
+
+  .react-datepicker__week {
+    background-color: white; /* Ensure the week background is white */
+  }
+
+  .react-datepicker__day {
+    background-color: white;
+
+    
+  }
+
+  .react-datepicker__current-month {
+    background-color: white;
+  }
+
+  .react-datepicker__header__dropdown {
+    background-color: white;
+  }
+
+  .react-datepicker__year-read-view--selected-year {
+    background-color: white;
+    color: black;
+  }
+
+  .react-datepicker__day-names {
+    background-color: white;
+  }
+
+  .react-datepicker__day-name {
+    background-color: white;
+  }
+
+  .react-datepicker__month-container {
+    background-color: white;
+
+  }
+
+.react-datepicker__year-option {
+    background-color: lightgray;
+    color: black;
+}
+
+.react-datepicker__year-option--selected {
+    background-color: lightgrey;
+    color: black;
+}
+
+
+  .datePickerDiv {
+    display: inline-block;
+    position: relative;
+    top: 2rem;
+  }
+
+  .dueDate {
+    background-color: rgb(169, 169, 169);
+    display: inline-block;
+    color: black;
+
+  }
